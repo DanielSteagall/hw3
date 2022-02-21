@@ -1,7 +1,7 @@
 class PlacesController < ApplicationController
     
     def index
-        @places = Place.All
+        @places = Place.all
     end
 
     def show
@@ -13,7 +13,7 @@ class PlacesController < ApplicationController
     end
 
     def create
-        @place = Place.new(params[place])
+        @place = Place.new(params["place"])
         @place.save
         redirect_to "/places"
     end
